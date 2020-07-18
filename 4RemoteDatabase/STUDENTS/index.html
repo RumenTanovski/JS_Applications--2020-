@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <button id="loadStudents">LOAD ALL STUDENTS</button>
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+
+            <label for="ID Number"><b>ID Number</b></label>
+            <input id="IDNumber" type="number" placeholder="ID Number" required>
+
+            <label for="First Name"><b>First Name</b></label>
+            <input id="firstName" type="text" placeholder="First Name" required>
+
+            <label for="Last Name"><b>Last Name</b></label>
+            <input id="lastName" type="text" placeholder="Last Name" required>
+
+            <label for="Faculty Number"><b>Faculty Number</b></label>
+            <input id="facNumber" type="text" placeholder="Faculty Number" required>
+
+            <label for="Grade"><b>Grade</b></label>
+            <input id="grade" type="number" step="0.01" placeholder="Grade" required>
+
+            <button id="createStudent" type="submit"  onclick="closeForm()" class="btn">Create</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <table id="results">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Faculty Number</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button class="open-button" onclick="openForm()">Create Student</button>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script type="module" src="./app.js">
+    </script>
+</body>
+
+</html>
