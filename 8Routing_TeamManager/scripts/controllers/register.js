@@ -1,4 +1,4 @@
-import * as api from './data.js';
+import * as api from '../data.js';
 
 export default async function register(context) {
     context.partials = {
