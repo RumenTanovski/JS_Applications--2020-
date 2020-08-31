@@ -1,0 +1,34 @@
+
+{{> header}}
+<main>
+<h1>Edit Offer</h1>
+        <p class="message"></p>
+        <form action="#/edit/{{shoe.id}}" method="post">
+        
+            <div>
+                <input type="text"  name="title" value="{{shoe.id}}">
+            </div>
+            <div>
+                <input type="text" placeholder="Price..." name="price" value="" >
+            </div>
+            <div>
+                <input type="text" placeholder="Image url..." name="imageUrl" value="">
+            </div>
+            <div>
+                <textarea placeholder="Give us some description about this offer..." name="description"></textarea>
+            </div>
+            <div>
+                <input type="text" placeholder="Brand..." name="brand" value="">
+            </div>
+            <div>
+                <button>Edit</button>
+            </div>
+        </form>  
+
+    </main>
+  {{> footer}}
+
+
+
+
+
